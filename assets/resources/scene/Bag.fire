@@ -58,7 +58,7 @@
     "_groupIndex": 0,
     "groupIndex": 0,
     "autoReleaseAssets": false,
-    "_id": "5645445a-debd-4138-b966-f684485a280c"
+    "_id": "3a60f0e4-e046-41c9-8530-f6bc1a442bbe"
   },
   {
     "__type__": "cc.Node",
@@ -124,7 +124,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "94tBGIrqpMtZSHYHV6/QEI"
+    "_id": "baXPauzE9EPo32v8g7wlZ4"
   },
   {
     "__type__": "cc.Node",
@@ -165,7 +165,7 @@
       "array": [
         0,
         0,
-        413.9601430089617,
+        393.3821909474595,
         0,
         0,
         0,
@@ -186,7 +186,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "33UoirIUlKbLKlEz1/xlOC"
+    "_id": "45TWb+Py9N3JyO1sGQblvQ"
   },
   {
     "__type__": "cc.Camera",
@@ -222,7 +222,7 @@
     },
     "_renderStages": 1,
     "_alignWithScreen": true,
-    "_id": "a3EPYxJ3BKmYr8aAK2lsHs"
+    "_id": "b0adx9YfBHE6ctWjLmPBNN"
   },
   {
     "__type__": "cc.Canvas",
@@ -239,6 +239,6 @@
     },
     "_fitWidth": false,
     "_fitHeight": true,
-    "_id": "c945i1KPZHpqEU2nEarfzp"
+    "_id": "b7/XGdrABMTacciF8H2XKI"
   }
 ]
