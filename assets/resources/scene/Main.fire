@@ -93,7 +93,7 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 38
+        "__id__": 39
       }
     ],
     "_prefab": null,
@@ -1280,7 +1280,11 @@
       }
     ],
     "_active": true,
-    "_components": [],
+    "_components": [
+      {
+        "__id__": 38
+      }
+    ],
     "_prefab": null,
     "_opacity": 255,
     "_color": {
@@ -1610,6 +1614,25 @@
     "_isTrimmedMode": true,
     "_atlas": null,
     "_id": "bdqoo05eVDlpOgGnwYojJ5"
+  },
+  {
+    "__type__": "7e6caJNiApHnIlw/r3lgc/Y",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 31
+    },
+    "_enabled": true,
+    "hangup": {
+      "__id__": 33
+    },
+    "map": {
+      "__id__": 35
+    },
+    "battle": {
+      "__id__": 37
+    },
+    "_id": "32u86JmMVC5a7YMy/hEwnB"
   },
   {
     "__type__": "cc.Canvas",

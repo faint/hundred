@@ -14,7 +14,7 @@ const {ccclass, property} = cc._decorator;
 export default class BattleMenu extends cc.Component {
 
     @property(cc.Sprite)
-    hangup: cc.Sprite = null;
+    idle: cc.Sprite = null;
 
     @property(cc.Sprite)
     map: cc.Sprite = null;
@@ -27,9 +27,9 @@ export default class BattleMenu extends cc.Component {
     // onLoad () {}
 
     start () {
-        if (this.hangup != null) {
-            this.hangup.node.on(cc.Node.EventType.TOUCH_END, function() {
-                cc.loader.loadRes("prefab/pages/Hangup", function(err, prefab) {
+        if (this.idle != null) {
+            this.idle.node.on(cc.Node.EventType.TOUCH_END, function() {
+                cc.loader.loadRes("prefab/pages/Idle", function(err, prefab) {
                     let node = cc.instantiate(prefab);
                     cc.director.getScene().addChild(node);
                 });
