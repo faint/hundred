@@ -18,54 +18,61 @@ export default class Card {
     对自己造成伤害时
     你的回合结束时
     对自己造成伤害时
+    抽牌时
     */
     /* 效果整理
     复制1张临时牌加入手牌
     伤害翻倍
-    获得2点护甲
+    
     已损失生命每有5点，伤害+1
-    敌方失去所有行动力，每失去1点，伤害+2
-    本回合每使用1张行动牌，伤害+1
     造成6点穿刺伤害
     下回合少抽1张牌
     每装备1件装备，额外造成2点伤害
     移除
-    获得6点法力
-    每有1张手牌，伤害+1
-    行动力+2
+    
     敌方生命低于30%时，造成10倍伤害
-    每造成1点伤害，获得1点护甲
     破坏敌方1张装备牌，如果成功，则对敌方造成3点伤害
     下回合额外抽1张牌
     将2张恶作剧牌洗入敌方的牌组
-    敌方下回合抽牌时，随机丢弃1张牌
-    获得4点护甲
-    恢复5点生命
-    恢复5点生命，超过的部分转化为护甲
+    随机丢弃1张牌
+    获得x点速度
+    获得x点韧性
+    获得x点防御
+    恢复x点生命
+    获得x点魂力
+    获得x点会心
+    获得x点韧性
     */
     
     id: Number = 0;
     name: String = "";
     type: Number = 0; // 牌的类型：攻击、行动、装备、魂力、法术、反制、特殊
     subType: Number = 0; // 牌的子类型：护甲、武器等
+    max: Number = 3; // 最大进卡组数量
     percent: Number = 0; // 技能触发概率
+    
     // 技能触发条件(如果不满足条件，技能不会触发)
     // 临时标记： 生效后消失，不会回到牌组
 
-    attackProbability: Number = 0; // 攻击触发万分比 <- 注意
-    attackTarget: Number = 0; // 攻击目标, 0:自己，1敌人
-    attack: Number = 0; // 攻击万分比
-    attackType: Number = 0; // 攻击类型：雷、火、冰……
-    attackRepeat: Number = 0; // 攻击重复次数 <- 注意
 
-    gainMP: Number = 0; // 获取x点魂力
-
-    bidCard: Number = 0; // 获得卡牌
-    bidType: Number = 0; // 获得类型，不指定时，则全牌组获得
-    bidSubType: Number = 0; // 获得子类型：如装备牌下的护甲、武器，不指定时，则全类型获得
+    // drawCard: Number = 0; // 获得卡牌
+    // drawCardType: Number = 0; // 获得类型，不指定时，则全牌组获得
+    // drawCardSubType: Number = 0; // 获得子类型：如装备牌下的护甲、武器，不指定时，则全类型获得
 
 
-    // 技能附加什么状态
+    attachStatus: String = ""; // 获得什么状态
+    attachDisplay: Boolean = false; // 状态是否显示
+    attachProbability: Number = 0; // 获得状态的几率
+    attachTarget: Number = 0; // 获得状态的目标
+    attachValue: Number[] = []; // 获得状态的参数
+    attachType: Number = 0; // 获得状态的类型
+    attachRepeat: Number = 0; // 获得状态的次数
+    occasion: Number = 0; // 触发状态的时机: 0:立刻
+    elapse: Number = 0; // 持续回合
+    removed: Boolean = false; // 移除
+    //
+
+    
     // 技能附加该状态的几率
 
     // 技能消耗（行动力，魂力）
